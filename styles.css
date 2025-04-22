@@ -4,24 +4,24 @@ body {
     padding: 0;
 }
 header {
-    background-color: #003366;
-    color: white;
+    background-color: #AC2B37;
+    color: #A9B0B7;
     padding: 10px 20px;
     text-align: center;
 }
 nav {
     display: flex;
     justify-content: center;
-    background-color: #00509E;
+    background-color: #A9B0B7;
 }
 nav a {
-    color: white;
+    color: #000000;
     text-decoration: none;
     padding: 15px 20px;
     display: block;
 }
 nav a:hover {
-    background-color: #003366;
+    background-color: #AC2B37;
 }
 .content {
     padding: 20px;
