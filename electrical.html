@@ -3,45 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrical Team</title>
+    <title>WPI AUV Team</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Electrical Team</h1>
-    </header>
-    <nav>
-        <a href="index.html">About</a>
-        <a href="electrical.html">Electrical</a>
-        <a href="mechanical.html">Mechanical</a>
-        <a href="software.html">Software</a>
-    </nav>
-    <main>
-        <div class="content" id="about">
-            <h2>About the Electrical Team</h2>
-            <p>The Electrical team focuses on designing and implementing the vehicle's power and control systems. We work on integrating sensors, actuators, and ensuring the vehicle's electrical components are robust and reliable.</p>
-            <p>Our team is dedicated to pushing the boundaries of underwater technology and ensuring our AUV can operate efficiently in various environments.</p>
-        </div>
-        <div class="content" id="team">
-            <h2>Team Members</h2>
-                <body>
-                    <p>No pictures yet!</p>
-                </body>
-        </div>
-        <div class="content" id="responsibilities">
-            <h2>Key Responsibilities</h2>
-            <p>
-                The Electrical team is responsible for the following tasks:
-                <br>* Designing and implementing the vehicle's power systems.
-                <br>* Integrating sensors and actuators for navigation and task execution.
-                <br>* Developing and testing circuit boards and electrical components.
-                <br>* Ensuring the waterproofing and durability of electrical systems.
-            </p>
-        </section>
-        <div class="content" id="goals">
-            <h2>Team Goals</h2>
-            <p>The Electrical Team aims to innovate and improve the AUV's performance by leveraging cutting-edge technology and ensuring robust electrical systems.</p>
-        </div>
-    </main>
+    <div class="fixed-top">
+        <header>
+            <h1>WPI AUV Team</h1>
+        </header>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="electrical.html">Electrical</a>
+            <a href="mechanical.html">Mechanical</a>
+            <a href="software.html">Software</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="donate.html">Donate!</a>
+        </nav>
+    </div>
+    <div class="sidenav">
+        <h3>Come meet us!</h3>
+        <p><b>General Body Meetings</b><br>Mondays 5-6pm @ SL011</p>
+        <p><b>Electrical Subteam Meetings</b><br>Saturdays 1-2 @ UH400</p>
+        <p><b>Mechanical Subteam Meetings</b><br>Thursdays 5-7pm @ HL202</p>
+        <p><b>Software Subteam Meetings</b><br>Sundays 4-6pm @ CC Chairs</p>
+    </div>
+    <div class="rightnav">
+        <h3>WPI RoboSub News!</h3>
+        <ul id="news-list"></ul>
+        <script src="news/newsdata.js"></script>
+        <script src="loadnews.js"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", loadNews);
+        </script>
+    </div>
+    <div class="content" id="about">
+        <h2>About the Electrical Team</h2>
+        <p>The Electrical team focuses on designing and implementing the vehicle's power and control systems. We work on integrating sensors, actuators, and ensuring the vehicle's electrical components are robust and reliable.</p>
+        <p>Our team is dedicated to pushing the boundaries of underwater technology and ensuring our AUV can operate efficiently in various environments.</p>
+    </div>
+    <div class="content" id="team">
+        <h2>Team Members</h2>
+            <body>
+                <p>No pictures yet!</p>
+            </body>
+    </div>
+    <div class="content" id="goals">
+        <h2>Team Goals</h2>
+        <p>The Electrical Team aims to innovate and improve the AUV's performance by leveraging cutting-edge technology and ensuring robust electrical systems.</p>
+    </div>
+    <div class="content" id="responsibilities">
+        <h2>Key Responsibilities</h2>
+        <p>The Electrical team is responsible for the following tasks:
+            <ul>
+                <li>Designing and implementing the vehicle's power systems.</li>
+                <li>Integrating sensors and actuators for navigation and task execution.</li>
+                <li>Developing and testing circuit boards and electrical components.</li>
+                <li>Ensuring the waterproofing and durability of electrical systems.</li>
+            </ul>
+        </p>
 </body>
 </html>

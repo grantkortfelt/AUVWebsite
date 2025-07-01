@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPI AUV Team</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>WPI AUV Team</h1>
+    </header>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="electrical.html">Electrical</a>
+        <a href="mechanical.html">Mechanical</a>
+        <a href="software.html">Software</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="donate.html">Donate!</a>
+    </nav>
+    <div class="sidenav">
+        <h3>Come meet us!</h3>
+        <p><b>General Body Meetings</b><br>Mondays 5-6pm @ SL011</p>
+        <p><b>Electrical Subteam Meetings</b><br>Saturdays 1-2 @ UH400</p>
+        <p><b>Mechanical Subteam Meetings</b><br>Thursdays 5-7pm @ HL202</p>
+        <p><b>Software Subteam Meetings</b><br>Sundays 4-6pm @ CC Chairs</p>
+    </div>
+    <div class="rightnav">
+        <h3>WPI RoboSub News!</h3>
+        <ul id="news-list"></ul>
+        <script src="newsdata.js"></script>
+        <script src="../loadnews.js"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", loadNews);
+        </script>
+    </div>
+    <div class="content">
+        <h1>News Update</h1>
+        <p><small>By Grant Kortfelt • Published on June 20, 2025 at 11:00 AM UTC</small></p>
+        <p><strong>Tags:</strong> feature</p>
+        <hr />
+        <p>News articles can now be added at will. They can also be deleted. Nice.</p>
+    </div>
+</body>
+</html>

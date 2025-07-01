@@ -1,0 +1,15 @@
+{
+    "id": "15-06-2025-01",
+    "title": "Initial Layout Complete",
+    "slug": "initial-layout-complete",
+    "author": {
+      "name": "Grant Kortfelt",
+      "id": "gpkortfelt"
+    },
+    "published_at": "2025-06-15T16:30:00Z",
+    "updated_at": "2025-06-15T16:30:00Z",
+    "summary": "Main layout including nav and sidebars has been completed.",
+    "content": "<p>The base layout for the site is now done. This includes a top navbar, left and right sidebars, and a responsive content area in the middle.</p>",
+    "tags": ["update"],
+    "image": {}
+  }

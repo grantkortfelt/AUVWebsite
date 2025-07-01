@@ -1,0 +1,15 @@
+{
+    "id": "24-06-2025-03",
+    "title": "News System Online",
+    "slug": "news-system-online",
+    "author": {
+      "name": "Grant Kortfelt",
+      "id": "gpkortfelt"
+    },
+    "published_at": "2025-06-24T09:15:00-04:00",
+    "updated_at": "2025-06-24T09:15:00-04:00",
+    "summary": "Static news system using JSON is up and working.",
+    "content": "<p>The news section now reads from static JSON files, making it easier to manage and update news articles without touching layout code.</p>",
+    "tags": ["update"],
+    "image": {}
+  }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPI AUV Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fixed-top">
+        <header>
+            <h1>WPI AUV Team</h1>
+        </header>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="electrical.html">Electrical</a>
+            <a href="mechanical.html">Mechanical</a>
+            <a href="software.html">Software</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="donate.html">Donate!</a>
+        </nav>
+    </div>
+    <div class="sidenav">
+        <h3>Come meet us!</h3>
+        <p><b>General Body Meetings</b><br>Mondays 5-6pm @ SL011</p>
+        <p><b>Electrical Subteam Meetings</b><br>Saturdays 1-2 @ UH400</p>
+        <p><b>Mechanical Subteam Meetings</b><br>Thursdays 5-7pm @ HL202</p>
+        <p><b>Software Subteam Meetings</b><br>Sundays 4-6pm @ CC Chairs</p>
+    </div>
+    <div class="rightnav">
+        <h3>WPI RoboSub News!</h3>
+        <ul id="news-list"></ul>
+        <script src="news/newsdata.js"></script>
+        <script src="loadnews.js"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", loadNews);
+        </script>
+    </div>
+    <div class="content" id="donate">
+        <h2>Support the SeaGoats!</h2>
+        <p>We're a passionate team of student engineers building an autonomous underwater vehicle (AUV) to compete in RoboSub, an international robotics competition focused on innovation, teamwork, and cutting-edge design.</p>
+        <p>As a fully student-run organization, we rely heavily on donations and support from individuals like you to bring our ideas to life. Every contribution goes directly toward components, tools, testing, and travel—helping us learn, build, and compete on a global stage.</p>
+        <h2>Why Donate?</h2>
+        <ul>
+            <li><strong>Empower Innovation:</strong> Your support fuels our research and development, allowing us to push the boundaries of underwater robotics.</li>
+            <li><strong>Foster Education:</strong> Donations help us provide hands-on learning experiences for students in engineering, programming, and robotics.</li>
+            <li><strong>Build Community:</strong> By donating, you become part of our journey, supporting a diverse team of students from various disciplines.</li>
+        </ul>
+        <h2>How You Can Help</h2>
+        <p>We have created a sponsorship packet for external organizations to support us, which can be found <a href="donate.pdf">here.</a></p>
+        <p>Thank you so much for supporting our team!</p>
+    </div>
+    <div class="content" id="sponsors">
+        <h2>Thank you to our current sponsors!</h2>
+        <ul>
+            <li>Grant Kortfelt</li>
+            <li>Lorem Ipsum</li>
+            <li>Zeckendorf Spiral</li>
+            <li>Q. Q. Switcheroo</li>
+        </ul>
+</body>
+</html>

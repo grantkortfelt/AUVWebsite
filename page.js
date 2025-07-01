@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.style.backgroundColor = "#333";
     nav.style.padding = "1rem";
 
-    const tabs = ["About", "Electrical", "Mechanical", "Software"];
+    const tabs = ["About", "Electrical", "Mechanical", "Software", "Documentation", "Donate"];
     const content = {
         About: "Welcome to the WPI AUV Team! We are a group of students passionate about autonomous underwater vehicles.",
         Electrical: "The Electrical team focuses on designing and building the electronic systems for the AUV.",
         Mechanical: "The Mechanical team is responsible for the physical design and construction of the AUV.",
-        Software: "The Software team develops the code that powers the AUV's autonomous capabilities."
+        Software: "The Software team develops the code that powers the AUV's autonomous capabilities.",
+        Documentation: "We maintain detailed documentation of our projects and processes.",
+        Donate: "Support our team by donating! Your contributions help us achieve our goals and participate in competitions."
     };
 
     const contentDiv = document.createElement("div");

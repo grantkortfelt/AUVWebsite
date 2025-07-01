@@ -1,0 +1,15 @@
+{
+    "id": "20-06-2025-01",
+    "title": "News Update",
+    "slug": "news-update",
+    "author": {
+      "name": "Grant Kortfelt",
+      "id": "gpkortfelt"
+    },
+    "published_at": "2025-06-20T11:00:00Z",
+    "updated_at": "2025-06-20T11:00:00Z",
+    "summary": "Added a news article.",
+    "content": "<p>News articles can now be added at will. They can also be deleted. Nice.</p>",
+    "tags": ["feature"],
+    "image": {}
+  }

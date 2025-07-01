@@ -1,0 +1,15 @@
+{
+    "id": "30-06-2025-01",
+    "title": "Website published",
+    "slug": "website-published",
+    "author": {
+      "name": "Grant Kortfelt",
+      "id": "gpkortfelt"
+    },
+    "published_at": "2025-06-30T23:00:00Z",
+    "updated_at": "2025-06-30T23:00:00Z",
+    "summary": "Website is functional.",
+    "content": "<p>The website is now published to GitHub! More updates will follow.</p>",
+    "tags": ["update"],
+    "image": {}
+  }

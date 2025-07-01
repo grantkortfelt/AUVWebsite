@@ -1,0 +1,15 @@
+{
+    "id": "29-06-2025-04",
+    "title": "Minor Bug Fixes",
+    "slug": "minor-bug-fixes",
+    "author": {
+      "name": "Grant Kortfelt",
+      "id": "gpkortfelt"
+    },
+    "published_at": "2025-06-29T18:45:00-04:00",
+    "updated_at": "2025-06-29T18:45:00-04:00",
+    "summary": "Addressed small issues in layout and responsiveness.",
+    "content": "<p>Fixed sidebar overflow on smaller screens and ensured navbar stays pinned when scrolling. Overall stability improvements.</p>",
+    "tags": ["fix", "responsive"],
+    "image": {}
+  }
