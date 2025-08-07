@@ -1,0 +1,52 @@
+#landing {
+  height: 100vh;
+  background: linear-gradient(to bottom, #AC2B37, #000a14); /* potentially image late */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600; /* semi-bold for impact */
+}
+
+#landing h1 {
+  font-weight: 600; /* bold */
+  font-size: 4rem;
+  padding: 2rem;
+  color: rgb(14, 117, 165);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* subtle shadow for depth */
+}
+
+.logo {
+  max-width: 85%;
+  height: auto;
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,1));
+}
+
+#landing img {
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+.scroll-down {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.scroll-down:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#about {
+  scroll-margin-top: 10vh ; /* offsets by header height for "about" button click*/
+}

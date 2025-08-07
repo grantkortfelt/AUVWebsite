@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WPI AUV Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="fixed-top">
-        <header>
-            <h1>WPI AUV Team</h1>
-        </header>
-        <nav>
-            <a href="index.html">About</a>
+<body style="padding-top: 0"> <!-- For landing page, no spacer at the top for the header-->
+    <section id="landing">
+        <img class="logo", src="imgs/SEAGOAT_logo.png" alt="WPI AUV Logo">
+        <div class="landing-content">
+        <h1>WPI AUV Team</h1>
+        <a id="about" href="#about" class="scroll-down">Learn More ↓</a>
+        </div>
+    </section>
+
+    <div class="nav fade-in-on-scroll">
+        <div class="nav-left">
+            <img src="imgs/SEAGOAT_blackandwhite.png" alt="Logo" class="navlogo" />
+            <p class="site-name">SEAGOATS WPI AUV TEAM</p>
+        </div>
+        <nav class="nav-center">
+            <a href="index.html">Home</a>
             <a href="electrical.html">Electrical</a>
             <a href="mechanical.html">Mechanical</a>
             <a href="software.html">Software</a>
@@ -20,14 +31,15 @@
             <a href="donate.html">Donate!</a>
         </nav>
     </div>
-    <div class="sidenav">
+
+    <div class="sidenav fade-in-on-scroll">
         <h3>Come meet us!</h3>
         <p><b>General Body Meetings</b><br>Mondays 5-6pm @ SL011</p>
         <p><b>Electrical Subteam Meetings</b><br>Saturdays 1-2 @ UH400</p>
         <p><b>Mechanical Subteam Meetings</b><br>Thursdays 5-7pm @ HL202</p>
         <p><b>Software Subteam Meetings</b><br>Sundays 4-6pm @ CC Chairs</p>
     </div>
-    <div class="rightnav">
+    <div class="rightnav fade-in-on-scroll">
         <h3>WPI RoboSub News!</h3>
         <ul id="news-list"></ul>
         <script src="news/newsdata.js"></script>
@@ -53,6 +65,37 @@
             <br>The <a href="mechanical.html">Mechanical Team</a> works on the vehicle's structure and propulsion.
             <br>The <a href="software.html">Software Team</a> develops the algorithms and software for navigation and task execution.
         </p>
+        <p style="font-size: 25px;">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+</p>
+
     </div>
+
+    <!-- Fades between landing page and content on scroll -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
+      const landing = document.getElementById("landing");
+      const vh10 = window.innerHeight * 0.2;  // 10% of viewport height, height of header
+
+      function handleScroll() {
+        const scrollY = window.scrollY;
+        const landingHeight = landing.offsetHeight;
+
+        fadeElements.forEach(el => {
+          if (scrollY > landingHeight - vh10) {
+            el.classList.add("visible");
+          } else {
+            el.classList.remove("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // run on load
+    });
+    </script>
+
 </body>
 </html>

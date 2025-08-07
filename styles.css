@@ -1,82 +1,118 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Exo 2', sans-serif;
     margin: 0;
-    padding-top: 153px;
 }
 
-header {
-    background-color: #AC2B37;
-    color: #000000;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 1001;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ===  NAV === */
+
+.nav {
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #A9B0B7;
+  border-bottom: 5px solid #000;
 }
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #A9B0B7;
-    border-bottom: 5px solid #000000;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 53px;
+
+/* LEFT SIDE (logo + name) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
-nav a {
-    color: #000000;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
+
+/* Logo styling */
+.navlogo {
+  height: 10vh;
+  width: auto;
 }
+
+/* Site name styling */
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* CENTER LINKS */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+/* Link styling */
+.nav-center a {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-center a:hover {
+  background-color: #AC2B37;
+  color: white;
+}
+
 nav a:hover {
     background-color: #AC2B37;
+    border-radius: 8px;
 }
+
 .content {
     text-align: left;
-    margin-left: calc(var(--sidenav-width, 250px));
-    margin-right: calc(var(--rightnav-width, 250px));
+    margin-left: calc(var(--sidenav-width, 400px));
+    margin-right: calc(var(--rightnav-width, 400px));
     padding: 0px 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     overflow-y: auto;
+    box-shadow: 2px 2px 5px rgb(167, 167, 167);
+    border-color: #000;  /* keep your black borders */
+    border-style: solid;
+    border-radius: 5px;
+
 }
-.sidenav {
-    border-right: 5px solid #000000;
-    height: 100%;
-    width: auto;
-    position: fixed;
-    z-index: 1;
-    background-color: #A9B0B7;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-top: 20px;
-    padding-left: 5px;
-}
+
+.sidenav,
 .rightnav {
-    border-left: 5px solid #000000;
-    position: fixed;
-    right: 0;
-    width: 250px;
-    height: calc(100% - 153px);
-    z-index: 1;
-    background-color: #A9B0B7;
-    overflow-x: hidden;
-    padding-left: 5px;
-    overflow-y: auto;
-    top: 153px;
-    padding-bottom: 20px;
+  position: fixed;
+  top: 13vh; 
+  bottom: 1vh;
+  width: 15vw;    
+  padding: 1rem 1.5rem; 
+  background-color: #A9B0B7;
+  overflow-y: auto;    /* scroll if content too tall */
+  box-sizing: border-box; 
+  font-size: 1rem;
+  line-height: 1.5;
+  border-color: #000; 
+  border-style: solid;
+  border-radius: 5px;
 }
+
+.sidenav {
+  left: 1ch;
+}
+
+.rightnav {
+  right: 1ch;
+}
+
+
 main {
-    margin-left: calc(var(--sidenav-width, 250px));
+    margin-left: calc(var(--sidenav-width, 270px));
     padding: 20px;
-    margin-right: calc(var(--rightnav-width, 250px));
+    margin-right: calc(var(--rightnav-width, 270px));
 }
 #news-list {
     list-style: disc;
@@ -84,4 +120,25 @@ main {
 }
 #news-list li {
     margin-bottom: 1em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === FADE ON SCROLL === */
+.fade-in-on-scroll {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* To handle header so it doesn't hide eveyrthing */
+main, body {
+  padding-top: 13vh; /* same as nav height + 3 for nice spacing*/
 }
