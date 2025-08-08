@@ -11,18 +11,16 @@
 <body style="padding-top: 0"> <!-- For landing page, no spacer at the top for the header-->
     <section id="landing">
         <img class="logo", src="imgs/SEAGOAT_logo.png" alt="WPI AUV Logo">
-        <div class="landing-content">
         <h1>WPI AUV Team</h1>
         <a id="about" href="#about" class="scroll-down">Learn More ↓</a>
-        </div>
     </section>
 
-    <div class="nav fade-in-on-scroll">
+    <div class="nav add-color-on-scroll hide-nav-icons">
         <div class="nav-left">
             <img src="imgs/SEAGOAT_blackandwhite.png" alt="Logo" class="navlogo" />
             <p class="site-name">SEAGOATS WPI AUV TEAM</p>
         </div>
-        <nav class="nav-center">
+        <nav class="nav-right blue-hover">
             <a href="index.html">Home</a>
             <a href="electrical.html">Electrical</a>
             <a href="mechanical.html">Mechanical</a>
@@ -30,7 +28,12 @@
             <a href="documentation.html">Documentation</a>
             <a href="donate.html">Donate!</a>
         </nav>
+        <button class="hamburger", id="hamburger", aria-label="Toggle navigation">
+            &#9776; <!-- hamburger icon -->
+        </button>
     </div>
+
+
 
     <div class="sidenav fade-in-on-scroll">
         <h3>Come meet us!</h3>
@@ -66,6 +69,7 @@
             <br>The <a href="software.html">Software Team</a> develops the algorithms and software for navigation and task execution.
         </p>
         <p style="font-size: 25px;">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        <p style="font-size: 25px;">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 </p>
@@ -75,7 +79,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
     <!-- Fades between landing page and content on scroll -->
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
+      const fadeElements = document.querySelectorAll(".fade-in-on-scroll, .add-color-on-scroll");
       const landing = document.getElementById("landing");
       const vh10 = window.innerHeight * 0.2;  // 10% of viewport height, height of header
 
@@ -96,6 +100,6 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
       handleScroll(); // run on load
     });
     </script>
-
+    <script src="hamburgerMenu.js"></script>
 </body>
 </html>

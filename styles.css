@@ -3,6 +3,20 @@ body {
     margin: 0;
 }
 
+content {
+    overflow-y: scroll; /* keep scroll */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+/* Hide scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+content::-webkit-scrollbar {
+  display: none;
+}
+
 /* ===  NAV === */
 
 .nav {
@@ -14,15 +28,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
-  background-color: #A9B0B7;
+  z-index: 10;
   border-bottom: 5px solid #000;
-}
+  background-color: #A9B0B7;} 
 
-/* LEFT SIDE (logo + name) */
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+/* Flag added to home page to hide the icons on landing to show when scrolls */
+.hide-nav-icons {
+    border-bottom: 0px solid;
+}
+.hide-nav-icons .nav-left {
+  opacity: 0;
 }
 
 /* Logo styling */
@@ -38,17 +53,40 @@ body {
   margin: 0;
 }
 
-/* CENTER LINKS */
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.nav-left {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  flex-shrink: 0; /* never shrink */
 }
 
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+  gap: 1rem;
+  min-width: 0; /* important for overflow */
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+
+/* Hide scrollbar but keep scroll */
+.nav-right::-webkit-scrollbar {
+  display: none;
+}
+.nav-right {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition:  max-height 0.4s ease;
+}
+
+/* CENTER LINKS */
+
 /* Link styling */
-.nav-center a {
+.nav-right a {
+  position: relative;
+  display: flex;
   color: #000;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -58,20 +96,127 @@ body {
   transition: background 0.3s ease;
 }
 
-.nav-center a:hover {
+.nav-right a:hover {
   background-color: #AC2B37;
   color: white;
 }
 
-nav a:hover {
-    background-color: #AC2B37;
+/* Flag for main page to start with blue hover */
+.blue-hover a:hover {
+  background-color: rgb(14, 117, 165);
+  color: white;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 5rem;
+}
+
+/* Hamburger menu if <1000px */
+@media (max-width: 1300px) {
+  .nav-right {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    box-sizing: border-box;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+    .nav-right.active {
+        position: absolute;  
+        width: auto;
+        padding-left: 1rem;
+        top: 100%;           
+        right: 1rem;
+        background-color: #A9B0B7;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+        z-index: 1200;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        border-style: solid;
+        border-radius: 5px;
+    }
+/* 
+    .nav-right.active {
+        position: absolute;  
+        top: 100%;           
+        right: 1rem;
+        margin-right: 2rem;
+        z-index: 1200;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    } */
+
+  .nav-right.active a {
+    display: inline-block;  /* hug the text */
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;  /* spacing between links */
     border-radius: 8px;
+    width: auto;  /* important to override any width:100% */
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.sidenav,
+.rightnav {
+  position: fixed;
+  top: 15vh;
+  bottom: 1vh;
+  padding: 1rem 1.5rem; 
+  background-color: #A9B0B7;
+  overflow-y: auto;    /* scroll if content too tall */
+  box-sizing: border-box; 
+  font-size: 1rem;
+  line-height: 1.5;
+  border-color: #000; 
+  border-style: solid;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+:root {
+  --sidenav-width: 15vw;
+  --rightnav-width: 15vw;
+  --breathing-room: 2vw;
+}
+
+.sidenav {
+  position: fixed;
+  left: 1ch;
+  width: var(--sidenav-width);
+}
+
+.rightnav {
+  position: fixed;
+  right: 1ch;
+  width: var(--rightnav-width);
+  z-index: 1;
+}
+
+main {
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .content {
     text-align: left;
-    margin-left: calc(var(--sidenav-width, 400px));
-    margin-right: calc(var(--rightnav-width, 400px));
+    margin-left: calc(var(--sidenav-width) + var(--breathing-room));
+    margin-right: calc(var(--rightnav-width) + var(--breathing-room));
     padding: 0px 10px;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -83,37 +228,6 @@ nav a:hover {
 
 }
 
-.sidenav,
-.rightnav {
-  position: fixed;
-  top: 13vh; 
-  bottom: 1vh;
-  width: 15vw;    
-  padding: 1rem 1.5rem; 
-  background-color: #A9B0B7;
-  overflow-y: auto;    /* scroll if content too tall */
-  box-sizing: border-box; 
-  font-size: 1rem;
-  line-height: 1.5;
-  border-color: #000; 
-  border-style: solid;
-  border-radius: 5px;
-}
-
-.sidenav {
-  left: 1ch;
-}
-
-.rightnav {
-  right: 1ch;
-}
-
-
-main {
-    margin-left: calc(var(--sidenav-width, 270px));
-    padding: 20px;
-    margin-right: calc(var(--rightnav-width, 270px));
-}
 #news-list {
     list-style: disc;
     padding-left: 1.5rem;
@@ -138,7 +252,28 @@ html {
     pointer-events: auto;
 }
 
+.add-color-on-scroll {
+  background-color: rgba(169, 176, 183, 0); 
+  transition: background-color 0.6s ease, border-bottom 0.6s ease;
+}
+
+.add-color-on-scroll.visible {
+  background-color: rgba(169, 176, 183, 1); 
+  border-bottom: 5px solid #000;
+}
+
+.add-color-on-scroll.visible .nav-left {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.add-color-on-scroll.visible .nav-right a:hover {
+  background-color: #AC2B37;
+  color: white;
+}
+
 /* To handle header so it doesn't hide eveyrthing */
 main, body {
   padding-top: 13vh; /* same as nav height + 3 for nice spacing*/
 }
+

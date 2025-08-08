@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Nav Test</title>
+<style>
+  body { margin: 0; }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: #A9B0B7;
+    padding: 0 1rem;
+  }
+  .nav-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: black;
+  }
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: #A9B0B7;
+      width: 200px;
+      height: calc(100vh - 60px);
+      padding: 1rem;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <span>Logo</span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#">About</a>
+      <a href="#">Electrical</a>
+      <a href="#">Mechanical</a>
+      <a href="#">Software</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      const navLinks = document.getElementById('nav-right');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

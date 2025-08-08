@@ -1,39 +1,38 @@
 #landing {
-  height: 100vh;
-  background: linear-gradient(to bottom, #AC2B37, #000a14); /* potentially image late */
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
+  background: linear-gradient(to bottom, #AC2B37, #000a14);
   color: white;
   font-family: 'Exo 2', sans-serif;
-  font-weight: 600; /* semi-bold for impact */
+  font-weight: 600;
+  position: relative;
 }
 
 #landing h1 {
-  font-weight: 600; /* bold */
-  font-size: 4rem;
-  padding: 2rem;
-  color: rgb(14, 117, 165);
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   letter-spacing: 0.1em;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* subtle shadow for depth */
+  color: rgb(14, 117, 165);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin: 0; /* reset */
 }
 
 .logo {
-  max-width: 85%;
+  max-width: clamp(200px, 50vw, 500px);
   height: auto;
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,1));
-}
-
-#landing img {
-  max-width: 600px;
-  margin-bottom: 1rem;
+  padding-top: 10vh;
 }
 
 .scroll-down {
-  margin-top: 2rem;
+  position: static;
+  bottom: 2rem;
   font-size: 1.25rem;
   color: white;
   text-decoration: none;
@@ -47,6 +46,15 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-#about {
-  scroll-margin-top: 10vh ; /* offsets by header height for "about" button click*/
+@media (max-width: 480px) {
+  #landing {
+    padding: 1rem;
+  }
+  #landing h1 {
+    font-size: 2rem;
+  }
+  .scroll-down {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
 }
