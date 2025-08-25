@@ -30,7 +30,7 @@ content::-webkit-scrollbar {
   padding: 0.5rem 2rem;
   z-index: 10;
   border-bottom: 5px solid #000;
-  background-color: #A9B0B7;} 
+  background-color: #6699CC;} 
 
 /* Flag added to home page to hide the icons on landing to show when scrolls */
 .hide-nav-icons {
@@ -136,7 +136,7 @@ content::-webkit-scrollbar {
         padding-left: 1rem;
         top: 100%;           
         right: 1rem;
-        background-color: #A9B0B7;
+        background-color: #6699CC;
         box-shadow: -2px 0 8px rgba(0,0,0,0.1);
         z-index: 1200;
         display: flex;
@@ -178,7 +178,7 @@ content::-webkit-scrollbar {
   top: 15vh;
   bottom: 1vh;
   padding: 1rem 1.5rem; 
-  background-color: #A9B0B7;
+  background-color: #6699CC;
   overflow-y: auto;    /* scroll if content too tall */
   box-sizing: border-box; 
   font-size: 1rem;
@@ -258,7 +258,7 @@ html {
 }
 
 .add-color-on-scroll.visible {
-  background-color: rgba(169, 176, 183, 1); 
+  background-color: #6699CC; 
   border-bottom: 5px solid #000;
 }
 
