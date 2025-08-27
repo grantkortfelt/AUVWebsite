@@ -83,5 +83,19 @@ window.NEWS_DATA = [
         "content": "<p>The WPI RoboSub donate link is now live! You can help us out at the following <a href=https://www.givecampus.com/campaigns/40435/donations/new?designation=autonomousunderwatervehicleclubauv&?a=8898889>link</a>. We sincerely thank anyone and everyone who contributes!</p>",
         "tags": ["donate", "update"],
         "image": {}
+      },{
+        "id": "26-08-2025-01",
+        "title": "Website goes live!",
+        "slug": "website-live",
+        "author": {
+          "name": "Grant Kortfelt",
+          "id": "gpkortfelt"
+        },
+        "published_at": "2025-08-25T16:21:00-04:00",
+        "updated_at": "2025-08-25T16:21:00Z",
+        "summary": "WPI RoboSub website goes live.",
+        "content": "<p>The website is officially live! Thank you to WPI for allowing us to host this project.</p>",
+        "tags": ["update"],
+        "image": {}
       }
   ];
